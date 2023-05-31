@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.navbar-light .navbar-nav .nav-link {
+  color: #264f9c;
+  font-size: 19px;
+  font-weight: 600;
+}
+a{
+  text-decoration: none;
+}
+.input-group-text {
+  font-size: 22px;
+  background: none;
+}
+a {
+  color: #264f9c;
+}
+body {
+  font-family: "Poppins";
+  color: #353536;
+}
+.bg-light {
+  background-color: #f0f0f0 !important;
+}
+.logo-size {
+  width: 140px;
+  height: 60px;
+}
+.logo-small {
+  width: 115px;
+  height: 47px;
+}
+.text-blue {
+  color: #264f9c;
+}
+.text-green {
+  color: #44973d;
+  font-size: 24px;
+}
+.text-grey {
+  color: #1e1e1e;
+}
+.about-circle {
+  width: 80%;
+  min-height: 400px;
+  background-color: #264f9c;
+}
+.about-rectangle {
+  width: 100%;
+  min-height: 200px;
+  background-color: #264f9c;
+}
+.number-rectangle {
+  width: 17%;
+  height: 120px;
+  margin-right:4%;
+  background-color: #f0f0f0;
+}
+/* .list-inline-item:not(:last-child){
+  margin-right: 6.7rem;
+} */
+.btn-outline-primary {
+  border-color: #264f9c;
+  border-width: 2px;
+  border-radius: 7px;
+}
+.btn-outline-primary:hover {
+  border-color: #264f9c;
+  background-color: #264f9c;
+  color: white;
+  border-width: 2px;
+  border-radius: 7px;
+}
+.background-color {
+  background-color: #f0f0f0;
+}
+.map-container {
+  height: 500px;
+  width: 100%;
+}
+.map-container iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.form-background {
+  background-color: #f8f6f4;
+  border-radius: 10px;
+}
+.submit {
+  background-color: #264f9c;
+  border-radius: 10px;
+}
+.width {
+  width: 100%;
+}
+.about-image {
+  position: absolute;
+  top: 68%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+}
+.about-mission {
+  position: absolute;
+  top: 8%;
+  left: 6%;
+  transform: translate(0%, 0%);
+  width: 556px;
+}
+.relative {
+  position: relative;
+  display: block;
+}
+.background-image {
+  background: url(./images/team-image.png) no-repeat 32% 64% #f0f0f0;
+}
+.slider-background {
+  /* background: url(images/background-1.svg) no-repeat center center; */
+  min-height: 340px;
+}
+.products-image {
+  background-color: #264f9c;
+  overflow: hidden;
+}
+.font-33 {
+  font-size: 33px;
+}
+.font-24 {
+  font-size: 24px;
+}
+.font-16 {
+  font-size: 16px;
+}
+.font-14 {
+  font-size: 14px;
+}
+.background-blue {
+  background-color: #264f9c;
+}
+.cursor {
+  cursor: pointer;
+}
+.percentages-rectangle {
+  width: 25%;
+  min-height: 40px;
+  background-color: #f0f0f0;
+}
+.about-background {
+  background-image: url(./images/about-imagenew3.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  min-height: 650px;
+}
+.font_color {
+  color: #1c2126;
+}
+.explore {
+  font-size: 28px;
+  border-bottom: 2px solid #264f9c;
+}
+.top-position {
+  top: 77%;
+  left: 10%;
+  width: 100%;
+}
+.searchBox {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%); */
+  background: #f0f0f0;
+  border-radius: 40px;
+  padding-left:10px;
+}
+
+.searchBox:hover > .searchInput {
+  width: 180px;
+  background: #264f9c;
+  /* padding: 0 6px; */
+  color:#f0f0f0;
+}
+
+.searchBox:hover > .searchButton {
+  /* background: white; */
+  color: #264f9c;
+}
+
+.searchButton {
+  color: #264f9c;
+  float: right;
+  width: 40px;
+  height: 40px;
+  /* border-radius: 50%; */
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  border: 0;
+  font-size:22px;
+}
+
+.searchInput {
+  border: none;
+  background: #f0f0f0;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #264f9c;
+  border-radius:40px;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 35px;
+  width: 0px;
+  padding-left:10px;
+}
+
+@media screen and (max-width: 620px) {
+  .searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+  }
+}
