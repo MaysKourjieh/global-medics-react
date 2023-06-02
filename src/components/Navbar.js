@@ -38,7 +38,7 @@ const Navbar = () => {
                 </a>
               </li>
           </ul>
-          <Link to="/home" className="navbar-brand mx-auto cursor" id="logo_button">
+          <Link to="/" className="navbar-brand mx-auto cursor" id="logo_button">
             <img className="logo-size" src={logo} alt="Global Medics" />
             </Link>
           <ul className="navbar-nav">
@@ -50,13 +50,21 @@ const Navbar = () => {
               </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">
+            <div className="searchBox">
+              <input className="searchInput" type="text" name="" placeholder="" />
+              <button className="searchButton" href="#">
+                <i className="fa fa-search cursor"></i>
+              </button>
+          </div>
+          </form>
+          {/* <form className="form-inline my-2 my-lg-0">
             <div className="input-group rounded">
                 <span className="input-group-text border-0" id="search-addon">
-                  {/* <a><FontAwesomeIcon icon="fa-search" /></a> */}
+                  <a><i className="fa fa-search cursor"></i></a>
                   
                 </span>
               </div>
-          </form>
+          </form> */}
         </div>
       </nav>
     )

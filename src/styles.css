@@ -116,7 +116,7 @@ body {
 }
 .slider-background {
   /* background: url(images/background-1.svg) no-repeat center center; */
-  min-height: 340px;
+  height: 336px;
 }
 .products-image {
   background-color: #264f9c;
@@ -220,4 +220,37 @@ body {
     width: 150px;
     padding: 0 6px;
   }
+}
+.carousel-indicators [data-bs-target] {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  opacity: 1;
+}
+.carousel-indicators [data-bs-target]:hover,.carousel-indicators [data-bs-target].active {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: white;
+  width:4%;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  opacity: 1;
+}
+/* .carousel-indicators{
+  top:79%;
+} */
+.carousel-caption{
+  bottom:3.25rem;
 }

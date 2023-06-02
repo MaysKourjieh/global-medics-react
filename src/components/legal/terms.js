@@ -2,12 +2,11 @@ import * as React from "react"
 import Layout from "../../components/Layout";
 import { Center } from "../../components/styled";
 
-export default function Home() {
+export default function Terms() {
     const title = 'Global Medics USA';
     return <>
     <title>{title}</title>
         <Layout>
-            <Center>
       <div className="d-flex align-items-center flex-column justify-content-center h-100 pt-4 text-blue" id="about">
         <h1 className="display-5">TERMS & CONDITIONS</h1>
         <div className="row h-100">
@@ -85,7 +84,6 @@ our users.</p>
             </main>
         </div>
     </div>
-            </Center>
 
         </Layout>
     </>;

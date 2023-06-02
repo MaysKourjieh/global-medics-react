@@ -63,11 +63,11 @@ const Footer = () => {
         <div className="col-md-4 box">
           <ul className="list-inline quick-links">
             <li className="list-inline-item margin-r font-14 pe-5">
-            <Link to="/legal/privacy" className="text-white">Privacy Policy
+            <Link to="/privacy" className="text-white">Privacy Policy
                 </Link>
             </li>
             <li className="list-inline-item font-14">
-            <Link to="/legal/terms" className="text-white">Terms and Conditions
+            <Link to="/terms" className="text-white">Terms and Conditions
               </Link>
             </li>
           </ul>

@@ -8,7 +8,7 @@ import {
     Link
   } from "react-router-dom";
 
-export default function Home() {
+export default function Products() {
     return <>
         <Layout>
         <div className="d-flex align-items-center flex-column justify-content-center h-100 pt-4 text-blue" id="about">
