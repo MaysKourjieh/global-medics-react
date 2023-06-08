@@ -9,10 +9,27 @@ import {
 } from "react-router-dom";
 import './Navbar.css';
 import logo from "../images/gmu_logo_lg.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../components/functions.js';
 
 const Navbar = () => {
+    const handleAboutScroll = () => {
+      const element = document.getElementById('about');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    const handleContactScroll = () => {
+      const element = document.getElementById('contact');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    const handleTeamScroll = () => {
+      const element = document.getElementById('team');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
     return (        
         <nav className="navbar navbar-expand-lg navbar-light bg-light p-0 pb-2 text-primary" id="header">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,9 +39,9 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav">
             <li className="nav-item dropdown">
-                <Link to="/products" className="nav-link dropdown-toggle cursor" id="products_button" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a className="nav-link dropdown-toggle cursor" id="products_button" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Products
-              </Link>
+              </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a className="dropdown-item" href="#">Action</a>
                 <a className="dropdown-item" href="#">Another action</a>
@@ -33,7 +50,7 @@ const Navbar = () => {
               </div>
             </li>
               <li className="nav-item">
-              <a className="nav-link cursor" id="about_button">
+              <a className="nav-link cursor" id="about_button" onClick={handleAboutScroll}>
                 About Us
                 </a>
               </li>
@@ -43,10 +60,10 @@ const Navbar = () => {
             </Link>
           <ul className="navbar-nav">
             <li className="nav-item">
-                <a className="nav-link cursor" id="team_button">Our Team</a>
+                <a className="nav-link cursor" id="team_button" onClick={handleTeamScroll}>Our Team</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link cursor" id="contact_button">Contact</a>
+                <a className="nav-link cursor" id="contact_button" onClick={handleContactScroll}>Contact</a>
               </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">

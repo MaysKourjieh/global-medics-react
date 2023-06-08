@@ -16,6 +16,7 @@ import {
 } from "react-router-dom";
 // import Home from './components/Home';
 import About from './components/about';
+import Products from './components/products/index';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -28,6 +29,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="about" element={<About />} />
+        <Route path="products" element={<Products />} />
         <Route path="privacy" element={<Privacy />} />
         <Route path="terms" element={<Terms />} />
       </Routes>
