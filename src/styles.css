@@ -133,7 +133,7 @@ body {
   display: block;
 }
 .background-image {
-  background: url(./images/team-image.png) no-repeat 32% 64% #f0f0f0;
+  background: url(./images/team-image.png) no-repeat 32% 55% #f0f0f0;
 }
 .slider-background {
   /* background: url(images/background-1.svg) no-repeat center center; */

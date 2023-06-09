@@ -238,33 +238,24 @@ export default function App(props) {
                         <div className="carousel-item active" style={styles1}>
                             {/* <img className="bd-placeholder-img bd-placeholder-img-lg d-block" height="336" src={background1} /> */}
                             <div className="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>
-                                    Some representative placeholder content for
-                                    the first slide.
-                                </p>
+                                <h5>{contentInfo.index.carousel_1_heading}</h5>
+                                <p>{contentInfo.index.carousel_1_subheading}</p>
                             </div>
                         </div>
                         <div className="carousel-item" style={styles2}>
                             {/* <img className="bd-placeholder-img bd-placeholder-img-lg d-block"  height="336" src={background2}/> */}
 
                             <div className="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>
-                                    Some representative placeholder content for
-                                    the second slide.
-                                </p>
+                                <h5>{contentInfo.index.carousel_2_heading}</h5>
+                                <p>{contentInfo.index.carousel_2_subheading}</p>
                             </div>
                         </div>
                         <div className="carousel-item" style={styles3}>
                             {/* <img className="bd-placeholder-img bd-placeholder-img-lg d-block"  height="336" src={background3} /> */}
 
                             <div className="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>
-                                    Some representative placeholder content for
-                                    the third slide.
-                                </p>
+                                <h5>{contentInfo.index.carousel_3_heading}</h5>
+                                <p>{contentInfo.index.carousel_3_subheading}</p>
                             </div>
                         </div>
                     </div>
@@ -414,17 +405,13 @@ export default function App(props) {
                                 <div className="row m-0">
                                     <div className="col-md-6 ps-0 mt-5 pe-5 pt-5">
                                         <h4 className="font-33 pe-0 font-italic font-weight-bold">
-                                            Dedicated to provide the world with
-                                            high quality vitamins and
-                                            supplements, we have our global team
-                                            ready to support you.
+                                            {
+                                                contentInfo.index
+                                                    .product_description
+                                            }
                                         </h4>
                                         <p className="font-24">
-                                            Have an interest in our products for
-                                            your country? Reach out to one of
-                                            our team members below and we will
-                                            be happy to assist you in all your
-                                            vitamin and supplement needs.
+                                            {contentInfo.index.product_cta}
                                         </p>
                                     </div>
                                     <div className="col-md-6 pe-0 float-end">
@@ -439,10 +426,11 @@ export default function App(props) {
                     className="d-flex align-items-center flex-column justify-content-center h-100 pt-4 text-blue"
                     id="about"
                 >
-                    <h1 className="display-5">About Us</h1>
+                    <h1 className="display-5">
+                        {contentInfo.index.about_title}
+                    </h1>
                     <span className="text-green mb-5">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam{" "}
+                        {contentInfo.index.about_subtitle}
                     </span>
                     <div className="row h-100">
                         <main className="col-md-12">
@@ -450,23 +438,19 @@ export default function App(props) {
                                 <div className="row m-0 mb-5">
                                     <div className="col-md-6 ps-0 pe-5">
                                         <h4 className="display-5 pe-0 mb-5">
-                                            Lorem ipsum dolor sit amet.
+                                            {contentInfo.index.about_heading}
                                         </h4>
                                         <p className="text-grey">
-                                            Lorem ipsum dolor sit amet,
-                                            consetetur sadipscing elitr, sed
-                                            diam nonumy eirmod tempor invidunt
-                                            ut labore et dolore magna aliquyam
-                                            erat, sed diam voluptua. At vero eos
-                                            et accusam et justo duo dolores et
-                                            ea rebum. Stet clita kasd gubergren,
-                                            no sea takimata sanctus est Lorem
+                                            {
+                                                contentInfo.index
+                                                    .about_description
+                                            }
                                         </p>
                                         <Link
                                             className="btn btn-outline-primary mt-4 text-blue ps-4 pe-4"
                                             to="/about"
                                         >
-                                            Read More
+                                            {contentInfo.index.about_cta}
                                         </Link>
                                     </div>
                                     <div className="col-md-6 pe-0 float-end relative">
@@ -485,133 +469,38 @@ export default function App(props) {
                     className="d-flex align-items-center flex-column justify-content-center pt-5 pb-5 mt-4 background-image background-color text-blue"
                     id="team"
                 >
-                    <h1 className="display-5">Meet The Team</h1>
+                    <h1 className="display-5">
+                        {contentInfo.index.team_title}
+                    </h1>
                     <span className="text-green mb-5">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam{" "}
+                        {contentInfo.index.team_subtitle}
                     </span>
                     <div className="row h-100">
                         <main className="col-md-12">
                             <div className="container">
-                                <div className="row m-0 mb-5">
-                                    <div className="col-md-6 ps-0 pe-5">
-                                        <img
-                                            className="float-start"
-                                            src={employee1}
-                                            width="200"
-                                            height="250"
-                                        />
-                                        <div className="col-md-6 ps-5 float-start">
-                                            <h6 className="font-weight-bold">
-                                                Frankie Chew
-                                            </h6>
-                                            <p className="small pb-1">
-                                                Asia & Africa Regional Sales &
-                                                Marketing
-                                            </p>
-                                            <p className="small">
-                                                Mr. Frankie Chew supports the
-                                                following regions/countries:
-                                                Europe, Central Asia/Middle
-                                                East(Sweden, Germany, France,
-                                                Turkey, Iran, Georgia ,
-                                                Azerbaijan, Russia, Kyrgyzstan,
-                                                Uzbekistan, Kazakhstan,
-                                                Tajikistan), East &West Africa
-                                                (Nigeria, Kenya, Ghana, Senegal,
-                                                South Africa, Ivory Coast)
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 pe-0">
-                                        <img
-                                            className="float-start"
-                                            src={employee2}
-                                            width="200"
-                                            height="250"
-                                        />
-                                        <div className="col-md-6 ps-5 float-start">
-                                            <h6 className="font-weight-bold">
-                                                Frankie Chew
-                                            </h6>
-                                            <p className="small pb-1">
-                                                Asia & Africa Regional Sales &
-                                                Marketing
-                                            </p>
-                                            <p className="small">
-                                                Mr. Frankie Chew supports the
-                                                following regions/countries:
-                                                Europe, Central Asia/Middle
-                                                East(Sweden, Germany, France,
-                                                Turkey, Iran, Georgia ,
-                                                Azerbaijan, Russia, Kyrgyzstan,
-                                                Uzbekistan, Kazakhstan,
-                                                Tajikistan), East &West Africa
-                                                (Nigeria, Kenya, Ghana, Senegal,
-                                                South Africa, Ivory Coast)
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div className="row m-0">
-                                    <div className="col-md-6 ps-0 pe-5">
-                                        <img
-                                            className="float-start"
-                                            src={employee3}
-                                            width="200"
-                                            height="250"
-                                        />
-                                        <div className="col-md-6 ps-5 float-start">
-                                            <h6 className="font-weight-bold">
-                                                Frankie Chew
-                                            </h6>
-                                            <p className="small pb-1">
-                                                Asia & Africa Regional Sales &
-                                                Marketing
-                                            </p>
-                                            <p className="small">
-                                                Mr. Frankie Chew supports the
-                                                following regions/countries:
-                                                Europe, Central Asia/Middle
-                                                East(Sweden, Germany, France,
-                                                Turkey, Iran, Georgia ,
-                                                Azerbaijan, Russia, Kyrgyzstan,
-                                                Uzbekistan, Kazakhstan,
-                                                Tajikistan), East &West Africa
-                                                (Nigeria, Kenya, Ghana, Senegal,
-                                                South Africa, Ivory Coast)
-                                            </p>
+                                    {contentInfo?.teamMembers.map((member) => (
+                                        <div className="col-md-6 ps-0 pe-5 mb-5">
+                                            <img
+                                                className="float-start"
+                                                src={`${BASE_URL}/storage/${member.photo}`}
+                                                width="200"
+                                                height="250"
+                                                alt=""
+                                            />
+                                            <div className="col-md-6 ps-5 float-start">
+                                                <h6 className="font-weight-bold">
+                                                    {member.full_name}
+                                                </h6>
+                                                <p className="small pb-1">
+                                                    {member.job}
+                                                </p>
+                                                <p className="small">
+                                                    {member.description}
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="col-md-6 pe-0">
-                                        <img
-                                            className="float-start"
-                                            src={employee4}
-                                            width="200"
-                                            height="250"
-                                        />
-                                        <div className="col-md-6 ps-5 float-start">
-                                            <h6 className="font-weight-bold">
-                                                Frankie Chew
-                                            </h6>
-                                            <p className="small pb-1">
-                                                Asia & Africa Regional Sales &
-                                                Marketing
-                                            </p>
-                                            <p className="small">
-                                                Mr. Frankie Chew supports the
-                                                following regions/countries:
-                                                Europe, Central Asia/Middle
-                                                East(Sweden, Germany, France,
-                                                Turkey, Iran, Georgia ,
-                                                Azerbaijan, Russia, Kyrgyzstan,
-                                                Uzbekistan, Kazakhstan,
-                                                Tajikistan), East &West Africa
-                                                (Nigeria, Kenya, Ghana, Senegal,
-                                                South Africa, Ivory Coast)
-                                            </p>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                         </main>
@@ -621,10 +510,11 @@ export default function App(props) {
                     className="d-flex align-items-center flex-column pt-5 justify-content-center h-100 text-blue"
                     id="contact"
                 >
-                    <h1 className="display-5">WE'D LOVE TO WORK WITH YOU</h1>
+                    <h1 className="display-5">
+                        {contentInfo.index.contact_title}
+                    </h1>
                     <span className="text-green mb-5">
-                        Contact us today and help us encourage others to live
-                        healthy, productive lives!
+                        {contentInfo.index.contact_subtitle}
                     </span>
                     <div className="row h-100">
                         <main className="col-md-12">
@@ -673,12 +563,19 @@ export default function App(props) {
                                                         className="select form-background border-0 float-end p-2 mb-3"
                                                         id="contact_interested"
                                                     >
-                                                        <option></option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
+                                                        {contentInfo.contactFormInterests.map(
+                                                            (interest) => (
+                                                                <option
+                                                                    value={
+                                                                        interest.id
+                                                                    }
+                                                                >
+                                                                    {
+                                                                        interest.title
+                                                                    }
+                                                                </option>
+                                                            )
+                                                        )}
                                                     </select>
                                                 </div>
                                                 <div className="form-group width">
@@ -694,7 +591,10 @@ export default function App(props) {
                                             </div>
                                             <div className="form-group">
                                                 <button className="btn btn-primary submit mt-4">
-                                                    Submit
+                                                    {
+                                                        contentInfo.index
+                                                            .contact_submit_button_title
+                                                    }
                                                 </button>
                                             </div>
                                         </form>
