@@ -1,0 +1,68 @@
+{
+  "leadingText": "All about",
+  "slides": [
+    {
+      "introline": "dogs",
+      "id": "dogs",
+      "content": {
+        "image": "product.png"
+      }
+    },
+    {
+      "introline": "elephants",
+      "id": "elephants",
+      "content": {
+        "image": "product.png"
+      }
+    },
+    {
+      "introline": "bears",
+      "id": "bears",
+      "content": {
+        "image": "product.png"
+      }
+    },
+    {
+      "introline": "lizards",
+      "id": "lizards",
+      "content": {
+        "image": "product.png"
+      }
+    },
+    {
+      "introline": "snakes",
+      "id": "snakes",
+      "content": {
+        "image": "product.png"
+      }
+    },
+    {
+      "introline": "cats",
+      "id": "cats",
+      "content": {
+        "image": "product.png"
+      }
+    },
+    {
+      "introline": "giraffes",
+      "id": "giraffes",
+      "content": {
+        "image": "product.png"
+      }
+    },
+    {
+      "introline": "owls",
+      "id": "owls",
+      "content": {
+        "image": "product.png"
+      }
+    },
+    {
+      "introline": "horses",
+      "id": "horses",
+      "content": {
+        "image": "product.png"
+      }
+    }
+  ]
+}

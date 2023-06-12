@@ -1,3 +1,4 @@
+
 import * as React from "react"
 import Layout from "./components/Layout";
 import {
@@ -17,7 +18,9 @@ import employee3 from "./images/employee3.png";
 import employee4 from "./images/employee4.png";
 import './components/functions.js';
 import ReactPaginate from 'react-paginate';
-
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader  
+import { Carousel } from 'react-responsive-carousel'; 
+import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
 export default function App(props) {
   const title = 'Global Medics USA';
   const [click, setClicked] = useState(false);
@@ -25,6 +28,116 @@ export default function App(props) {
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
   };
+  const htmlContent = () => {
+    return <div>
+  HyperText Markup Language, commonly referred to as HTML, is the standard markup language used to create web pages. Along with CSS, and JavaScript, HTML is a cornerstone technology, used by most websites to create visually engaging web pages, user interfaces for web applications, and user interfaces for many mobile applications.[1] Web browsers can read HTML files and render them into visible or audible web pages. HTML describes the structure of a website semantically along with cues for presentation, making it a markup language, rather than a programming language.
+</div>;
+}
+let headerText = [{ text: "Twitter" }, { text: "Facebook" }, { text: "WhatsApp" }];
+const csharpContent = () => {
+    return <div>
+  C# is intended to be a simple, modern, general-purpose, object-oriented programming language. Its development team is led by Anders Hejlsberg. The most recent version is C# 5.0, which was released on August 15, 2012.
+</div>;
+}
+const javaContent = () => {
+    return <div>
+      <div className="row text-center me-0 h-100 overflow-hidden">
+        <div className="col-md-3 box font-18 mt-5 pt-2">44 products</div>
+        <div className="col-md-3 box font-18"></div>
+        <div className="col-md-3 box font-18"></div>
+        <div className="col-md-3 box pe-5 mt-3"><select className="select p-2 font-16 recommended-background border-0 float-end mb-3" id="contact_interested">
+        <option value="1">Recommended</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+  <option value="4">Four</option>
+  <option value="5">Five</option>
+  </select></div>
+  <div className='page-pagination'>
+        {products ? (
+            <div className="row text-center me-0 h-100 pb-5 pt-2 pe-0 ps-5 overflow-hidden" id="products">
+                  {currentPosts.map((product) => (
+
+                    <div key={product.id} target="_blank" className="col-md-3 box ps-0 pe-3 pb-4">
+  <div className="product-item pb-3 ">
+  <i className="fa fa-heart-o favorite-icon font-24 pt-3" id={product.id}  
+        onClick={heartClicked} ></i>
+        {/* onMouseLeave={heartEmpty}  */}
+        {/* onMouseOver={heartFilled} */}
+
+        <a href="products"><img src={productImage} width="250" /></a>
+              <a href="products"><h2 className="font-16">{product.title}</h2></a>
+              <a><span className="text-green font-16">{product.price}</span></a>
+           
+        </div>
+        </div>
+                    
+                  ))}
+                  <div className="d-flex flex-row pagination pt-5">
+                  <ReactPaginate
+						onPageChange={paginate}
+						pageCount={Math.ceil(products.length / postsPerPage)}
+						previousLabel={'<'}
+						nextLabel={'>'}
+						containerClassName={'pagination'}
+						pageLinkClassName={'page-number'}
+						previousLinkClassName={'page-number'}
+						nextLinkClassName={'page-number'}
+						activeLinkClassName={'active'}
+					/>
+          </div>
+            </div>
+         ) : (
+            <div className="loading">Loading...</div>
+         )}
+         
+</div>
+        {/* <nav aria-label="Page navigation example" className="ps-4 pt-5">
+  <ul className="d-flex flex-row pagination">
+    <li className="page-item shadow-none">
+      <a className="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span className="sr-only">Previous</span>
+      </a>
+    </li>
+    <li className="page-item shadow-none"><a className="page-link" href="#">1</a></li>
+    <li className="page-item shadow-none"><a className="page-link" href="#">2</a></li>
+    <li className="page-item shadow-none"><a className="page-link" href="#">3</a></li>
+    <li className="page-item shadow-none">
+      <a className="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span className="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav> */}
+      </div>
+</div>;
+}
+const vbNetContent = () => {
+    return <div>
+  The command-line compiler, VBC.EXE, is installed as part of the freeware .NET Framework SDK. Mono also includes a command-line VB.NET compiler. The most recent version is VB 2012, which was released on August 15, 2012.
+</div>;
+}
+const xamarinContent = () => {
+    return <div>
+  Xamarin is a San Francisco, California based software company created in May 2011[3] by the engineers that created Mono,[4] Mono for Android and MonoTouch that are cross-platform implementations of the Common Language Infrastructure (CLI) and Common Language Specifications (often called Microsoft .NET). With a C#-shared codebase,developers can use Xamarin tools to write native Android, iOS, and Windows apps with native user interfaces and share code across multiple platforms.[5] Xamarin has over 1 million developers in more than 120 countries around the World as of May 2015.
+</div>;
+}
+const aspNetcontent = () => {
+    return <div>
+  ASP.NET is an open-source server-side web application framework designed for web development to produce dynamic web pages. It was developed by Microsoft to allow programmers to build dynamic web sites, web applications and web services. It was first released in January 2002 with version 1.0 of the .NET Framework, and is the successor to Microsoft Active Server Pages (ASP) technology. ASP.NET is built on the Common Language Runtime (CLR), allowing programmers to write ASP.NET code using any supported .NET language. The ASP.NET SOAP extension framework allows ASP.NET components to process SOAP messages.
+</div>;
+}
+const mvcContent = () => {
+    return <div>
+  The ASP.NET MVC is a web application framework developed by Microsoft, which implements the model–view–controller (MVC) pattern. It is open-source software, apart from the ASP.NET Web Forms component which is proprietary. In the later versions of ASP.NET, ASP.NET MVC, ASP.NET Web API, and ASP.NET Web Pages (a platform using only Razor pages) will merge into a unified MVC 6. The project is called ASP.NET vNext.
+</div>;
+}
+const jsContent = () => {
+    return <div>
+  JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.[5] More recently, however, it has become common in both game development and the creation of desktop applications.
+</div>;
+}
 
   const styles1 = {
     background:`url("${background1}") no-repeat center center`,
@@ -212,121 +325,77 @@ function heartClicked(e){
   }
 }
 
+
   return <>
   <title>{ title }</title>
     <Layout>
-      <div id="carouselExampleCaptions" className="carousel slide slider-background" data-bs-ride="false">
-        <div className="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active ps-2 pt-2 pe-2 " aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" className="ps-2 pe-2 pt-2 " aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"  className="ps-2 pe-2 pt-2 " aria-label="Slide 3"></button>
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active" style={styles1}>
+    <Carousel showThumbs={false} showStatus={false}>  
+    <div className="carousel-inner">
+                <div className="carousel-item active" style={styles1}>
             {/* <img className="bd-placeholder-img bd-placeholder-img-lg d-block" height="336" src={background1} /> */}
             <div className="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>Some representative placeholder content for the first slide.</p>
             </div>
           </div>
-          <div className="carousel-item" style={styles2}>
-            {/* <img className="bd-placeholder-img bd-placeholder-img-lg d-block"  height="336" src={background2}/> */}
-      
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-          <div className="carousel-item" style={styles3}>
-            {/* <img className="bd-placeholder-img bd-placeholder-img-lg d-block"  height="336" src={background3} /> */}
-      
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
-        <div className="d-flex align-items-center flex-column background-white justify-content-center h-100" id="products">
-        <div className="row text-center me-0 h-100 overflow-hidden">
-        <div className="col-md-3 box font-18 mt-5 pt-2">44 products</div>
-        <div className="col-md-3 box font-18"></div>
-        <div className="col-md-3 box font-18"></div>
-        <div className="col-md-3 box pe-5 mt-5"><select className="select p-2 font-16 recommended-background border-0 float-end mb-3" id="contact_interested">
-        <option value="1">Recommended</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-  <option value="4">Four</option>
-  <option value="5">Five</option>
-  </select></div>
-  <div className='page-pagination'>
-        {products ? (
-            <div className="row text-center me-0 h-100 pb-5 pt-2 pe-0 ps-5 overflow-hidden" id="products">
-                  {currentPosts.map((product) => (
-
-                    <div key={product.id} target="_blank" className="col-md-3 box ps-0 pe-3 pb-4">
-  <div className="product-item pb-3 ">
-  <i className="fa fa-heart-o favorite-icon font-24 pt-3" id={product.id}  
-        onClick={heartClicked} ></i>
-        {/* onMouseLeave={heartEmpty}  */}
-        {/* onMouseOver={heartFilled} */}
-
-        <a href="products"><img src={productImage} width="250" /></a>
-              <a href="products"><h2 className="font-16">{product.title}</h2></a>
-              <a><span className="text-green font-16">{product.price}</span></a>
-           
-        </div>
-        </div>
                     
-                  ))}
-                  <div className="d-flex flex-row pagination pt-5">
-                  <ReactPaginate
-						onPageChange={paginate}
-						pageCount={Math.ceil(products.length / postsPerPage)}
-						previousLabel={'<'}
-						nextLabel={'>'}
-						containerClassName={'pagination'}
-						pageLinkClassName={'page-number'}
-						previousLinkClassName={'page-number'}
-						nextLinkClassName={'page-number'}
-						activeLinkClassName={'active'}
-					/>
-          </div>
+                </div>  
+                <div className="carousel-inner">
+                <div className="carousel-item active" style={styles2}>
+            {/* <img className="bd-placeholder-img bd-placeholder-img-lg d-block" height="336" src={background1} /> */}
+            <div className="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
             </div>
-         ) : (
-            <div className="loading">Loading...</div>
-         )}
-         
-</div>
-        {/* <nav aria-label="Page navigation example" className="ps-4 pt-5">
-  <ul className="d-flex flex-row pagination">
-    <li className="page-item shadow-none">
-      <a className="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span className="sr-only">Previous</span>
-      </a>
-    </li>
-    <li className="page-item shadow-none"><a className="page-link" href="#">1</a></li>
-    <li className="page-item shadow-none"><a className="page-link" href="#">2</a></li>
-    <li className="page-item shadow-none"><a className="page-link" href="#">3</a></li>
-    <li className="page-item shadow-none">
-      <a className="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span className="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav> */}
-      </div>
+          </div>
+                </div>  
+                <div className="carousel-inner">
+                <div className="carousel-item active" style={styles3}>
+            {/* <img className="bd-placeholder-img bd-placeholder-img-lg d-block" height="336" src={background1} /> */}
+            <div className="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+                </div>  
+            </Carousel>
+      
+        <div className="align-items-center flex-column background-white justify-content-center h-100" id="products">
+        <div className="mt-5">
+        <TabComponent heightAdjustMode='Auto' >
+      <TabItemsDirective>
+        <TabItemDirective header={headerText[0]} content={javaContent}/>
+        <TabItemDirective header={headerText[1]} content={csharpContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[0]} content={htmlContent}/>
+        <TabItemDirective header={headerText[1]} content={csharpContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[0]} content={htmlContent}/>
+        <TabItemDirective header={headerText[1]} content={csharpContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+        <TabItemDirective header={headerText[2]} content={javaContent}/>
+      </TabItemsDirective>
+    </TabComponent>
+    </div>
         </div>
+    
         <div className="d-flex align-items-center pt-5 flex-column justify-content-center h-100 products-image text-white" id="header">
             <div className="row h-100">
                 <main className="col-md-12">
